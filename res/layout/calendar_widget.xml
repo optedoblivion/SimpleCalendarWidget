@@ -1,20 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main_view"
     android:orientation="vertical"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:layout_margin="0dip"
-    android:background="#95000000"
+    android:background="@layout/custom_rounded_corner"
     android:padding="1dip">
+    <RelativeLayout
+        android:id="@+id/month_wrapper"
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="40dip"
+        android:layout_margin="0dip"
+        android:background="@drawable/pink_gradient">
+        <TextView
+            android:id="@+id/month_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@android:color/transparent"
+            android:textSize="25dip"
+            android:textColor="#333333"
+            android:typeface="serif"
+            android:textStyle="bold"
+            android:text="Feb"/>
+    </RelativeLayout>
     <TextView  
-        android:id="@+id/TextView01"
+        android:id="@+id/day_title"
         android:layout_width="wrap_content" 
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/month_wrapper"
         android:background="@android:color/transparent"
-        android:textColor="#EEEEEE"
+        android:textColor="#111111"
+        android:typeface="serif"
         android:textStyle="bold"
-        android:textSize="14dip"
-        android:shadowColor="#000000"
-        android:text="Loading..."/>
+        android:textSize="30dip"
+        android:text="27"/>
+    <TextView
+        android:id="@+id/weekday_title"
+        android:layout_width="wrap_content" 
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:background="@android:color/transparent"
+        android:textColor="#111111"
+        android:layout_below="@id/day_title"
+        android:typeface="serif"
+        android:textStyle="bold"
+        android:textSize="11dip"
+        android:text="Wednesday"/>
 </RelativeLayout>
